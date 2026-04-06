@@ -16,8 +16,10 @@ return {
             require("luasnip.loaders.from_vscode").lazy_load({
                 paths = { "./nvim-snippets" }
             })
-            require("mason").setup()
-            require("mason-lspconfig").setup()
+            require("mason").setup({ PATH = "prepend" })
+            require("mason-lspconfig").setup({
+                ensure_installed = { "rust_analyzer" },
+            })
 
             local luasnip = require("luasnip")
             vim.keymap.set({"i"}, "<C-K>", function() luasnip.expand() end, {silent = true})

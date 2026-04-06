@@ -33,5 +33,7 @@ return {
         vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
         vim.keymap.set("n", "<leader>pf", builtin.git_files, {})
         vim.keymap.set("n", "<leader>pc", builtin.git_status, {})
+        vim.keymap.set("n", "<leader>fs", builtin.lsp_document_symbols, { desc = "Document symbols" })
+        vim.keymap.set("n", "<leader>fS", builtin.lsp_workspace_symbols, { desc = "Workspace symbols" })
     end,
 }

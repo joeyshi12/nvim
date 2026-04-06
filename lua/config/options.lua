@@ -14,3 +14,5 @@ vim.opt.splitright = true
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = 'yes'
 vim.opt.updatetime = 50
+
+vim.filetype.add({ extension = { rs = "rust" } })
